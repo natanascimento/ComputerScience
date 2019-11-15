@@ -19,9 +19,12 @@ class tecnico_administrativo():
         print('Cadastro realizado com sucesso! ')
 
         self.salvar()
+    
     def salvar(self):
         with open(dados_tecnico_administrativo, 'a') as dados: 
             dados.write(str(self.lista_tecnico_administrativo) + '\n')
+    
+    
     def exibir(self):
         with open(dados_tecnico_administrativo, 'r') as arquivo: 
             for linha in arquivo: 

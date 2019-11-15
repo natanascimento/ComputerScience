@@ -14,7 +14,9 @@ class aluno (p.pessoa):
         self.lista_aluno = " "
         super().__init__()
 
-    def cadastro_aluno (self): 
+    def cadastro_aluno (self):
+        super().cadastrar_pessoa() 
+
         self.rg = input('Digite o RG: ')
         self.cpf = input('Digite o CPF: ')
         self.convenio = input('Digite o convenio: ')
@@ -22,9 +24,8 @@ class aluno (p.pessoa):
         self.facebook = input('Digite o facebook: ')
         self.linkedin = input('Digite o linkedin: ')
         self.instagram = input('Digite o instagram: ')
-        super().cadastrar_pessoa() 
         
-        self.lista_aluno = [self.rg, self.cpf, self.convenio, self.matricula, self.facebook, self.linkedin, self.instagram, super.p.nome, super.p.celular, super.p.email]
+        self.lista_aluno = [super.p.nome, super.p.celular, super.p.email, self.rg, self.cpf, self.convenio, self.matricula, self.facebook, self.linkedin, self.instagram]
 
         print('Cadastro realizado com sucesso! ')
 

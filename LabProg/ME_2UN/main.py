@@ -17,15 +17,16 @@ class menu:
         
 
     def main_menu(self):
-        print('1  -  Pessoa\n')
-        print('2 - Aluno\n')
-        print('3 - Tecnico Adiminstrativo')
-        print('4 - Professor')
+        print('     Sistema Escolar')
+        print('---------------------------')
+        print('1 - Pessoa\n2 - Aluno\n3 - Tecnico Adiminstrativo\n4 - Professor')
+        print('---------------------------')
         self.opcao = input('Informe uma opção: ')
-
-
+        
         if self.opcao == '1':
+            print('---------------------------')
             print('1  -  Cadastrar Pessoa \n2  -  Exibir Pessoa')
+            print('---------------------------')
             self.subopcao = input('Informe uma opção: ')
 
             if self.subopcao == '1':
@@ -33,9 +34,10 @@ class menu:
             if self.subopcao == '2':
                 self.p.exibir()
         
-        
         if self.opcao == '2':
+            print('---------------------------')
             print('1  - Cadastrar Aluno\n2  -  Exibir Aluno')
+            print('---------------------------')
             self.subopcao = input('Informe uma opção: ')
 
             if self.subopcao == '1':
@@ -44,7 +46,9 @@ class menu:
                 self.a.exibir_aluno()
         
         if self.opcao == '3':
+            print('---------------------------')
             print('1  -  Cadastrar Tecnico Administrativo \n2  -  Exibir Tecnico Administrativo')
+            print('---------------------------')
             self.subopcao = input('Informe uma opção: ')
 
             if self.subopcao == '1':
@@ -52,9 +56,10 @@ class menu:
             if self.subopcao == '2':
                 self.t.exibir()
         
-        
         if self.opcao == '4':
+            print('---------------------------')
             print('1  -  Cadastrar Professor\n2  -  Exibir Professor')
+            print('---------------------------')
             self.subopcao = input('Informe uma opção: ')
 
             if self.subopcao == '1': 

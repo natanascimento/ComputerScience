@@ -1,6 +1,8 @@
 dados_professor = 'professor.txt'
 
-class professor (): 
+import pessoa as p 
+
+class professor (p.pessoa): 
     def __init__(self): 
         self.matricula_professor = " "
         self.titulacao = " "
@@ -11,7 +13,9 @@ class professor ():
         self.lattes = " "
         self.nivel = " "
         super().__init__()
+
     def cadastrar_professor(self):
+        super().cadastrar_pessoa()
         self.matricula_professor = input('Digite a matricula do professor: ')
         self.titulacao = input('Digite a titulação: ')
         self.especialidade = input('Digite a especialidade: ')
@@ -20,7 +24,7 @@ class professor ():
         self.linkedin = input('Digite o Linkedin: ')
         self.lattes = input('Digite o lattes: ')
         self.nivel = input('Digite o nivel: ')
-        self.lista_professor = [self.matricula_professor, self.titulacao, self.especialidade, self.plus_salario, self.salario_hora, self.linkedin, self.lattes, self.nivel]
+        self.lista_professor = [super.p.nome, super.p.celular, super.p.email, self.matricula_professor, self.titulacao, self.especialidade, self.plus_salario, self.salario_hora, self.linkedin, self.lattes, self.nivel]
 
         print('Cadastro realizado com sucesso! ')
 

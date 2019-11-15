@@ -12,9 +12,11 @@ class professor (p.pessoa):
         self.linkedin = " "
         self.lattes = " "
         self.nivel = " "
+        self.lista_professor = ' '
         super().__init__()
 
     def cadastrar_professor(self):
+        super().cadastrar_pessoa() 
         self.matricula_professor = input('Digite a matricula do professor: ')
         self.titulacao = input('Digite a titulação: ')
         self.especialidade = input('Digite a especialidade: ')
@@ -24,9 +26,7 @@ class professor (p.pessoa):
         self.lattes = input('Digite o lattes: ')
         self.nivel = input('Digite o nivel: ')
         
-        super().cadastrar_pessoa() 
-        
-        self.lista_professor = [self.matricula_professor, self.titulacao, self.especialidade, self.plus_salario, self.salario_hora, self.linkedin, self.lattes, self.nivel, super.p.nome, super.p.celular, super.p.email]
+        self.lista_professor = [self.nome, self.celular, self.email, self.matricula_professor, self.titulacao, self.especialidade, self.plus_salario, self.salario_hora, self.linkedin, self.lattes, self.nivel]
     
         print('Cadastro realizado com sucesso! ')
 
@@ -35,10 +35,11 @@ class professor (p.pessoa):
     
     def salvar(self):
         with open(dados_professor, 'a') as dados:
-            dados.write(str(self.lista_professor) + '\n')
+            dados.write(str(self.lista_professor))
     
 
     def exibir(self):
+        print ('[nome, celular, email, matricula_professor, titulação, especialidade, plus_salario, salario_hora, linkedin, lattes, nivel]')
         with open(dados_professor, 'r') as arquivo:
             for linha in arquivo:
                 linhas_em_brancos = linha.strip()

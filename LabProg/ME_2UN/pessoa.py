@@ -18,13 +18,11 @@ class pessoa:
 
         self.lista_pessoa = [self.nome, self.celular, self.email]
 
-        print ("Cadastro Realizado com Sucesso!")
-
         self.salvar()
 
     def salvar(self):
         with open (dados_pessoa, 'a') as dados:
-            dados.write(str(self.lista_pessoa) + "\n")
+            dados.write(str(self.lista_pessoa))
 
     def exibir(self):
         with open (dados_pessoa, 'r') as arquivo:

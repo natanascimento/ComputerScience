@@ -6,7 +6,7 @@ class curso():
         self.valor = " " 
         self.carga_horaria = " " 
         self.qtd_alunos = " "
-        super().__init__()
+        self.lista_curso = ' '
 
     def cadastrar_curso(self):
         self.nome = input('Digite o nome do curso: ')
@@ -22,7 +22,7 @@ class curso():
 
     def salvar(self): 
         with open (dados_curso, 'a') as dados: 
-            dados.write(str(self.lista_curso) + '\n')
+            dados.write(str(self.lista_curso))
 
     def exibir(self): 
         with open (dados_curso, 'r') as arquivo:

@@ -2,6 +2,7 @@
 
 dados_pessoa = 'pessoa.txt'
 
+
 class pessoa:
 
     def __init__(self):
@@ -30,3 +31,4 @@ class pessoa:
             for linha in arquivo:
                 linhas_em_brancos = linha.strip()
                 print(linhas_em_brancos)
+                

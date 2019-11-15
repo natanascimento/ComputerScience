@@ -20,7 +20,7 @@ class menu:
     def main_menu(self):
         print('     Sistema Escolar')
         print('---------------------------')
-        print('1 - Pessoa\n2 - Aluno\n3 - Tecnico Adiminstrativo\n4 - Professor')
+        print('1 - Pessoa\n2 - Aluno\n3 - Tecnico Adiminstrativo\n4 - Professor\n5 - Curso')
         print('---------------------------')
         self.opcao = input('Informe uma opção: ')
         
@@ -68,15 +68,18 @@ class menu:
             if self.subopcao == '2':
                 self.f.exibir()
         
-        
         if self.opcao == '5':
-            print('1  -   Cadastrar Curso \n2  -  Exibir Curso')
+            print('---------------------------')
+            print('1 - Cadastrar Curso\n2 - Exibir Curso\n3 - Exibir Valor Total do Curso')
+            print('---------------------------')
             self.subopcao = input('Informe uma opção: ')
 
             if self.subopcao == '1':
                 self.c.cadastrar_curso()
             if self.subopcao == '2':
-                self.c.exibir()           
+                self.c.exibir()   
+            if self.subopcao == '3':
+                self.c.exibir_valor()        
         
 
 main = menu()

@@ -1,6 +1,6 @@
-import pickle
+#Classe Pessoa#
 
-dados_pessoa = 'pessoa.pickle'
+dados_pessoa = 'pessoa.txt'
 
 class pessoa:
 
@@ -8,29 +8,25 @@ class pessoa:
         self.nome = " "
         self.celular = " "
         self.email = " "
-    
+        self.lista_pessoa = ' '
+
     def cadastrar_pessoa (self):
         self.nome = input('Informe seu nome: ')
         self.celular = input('Informe seu celular: ')
         self.email = input('Informe seu email: ')
 
-        lista_pessoa = [self.nome, self.celular, self.email]
+        self.lista_pessoa = [self.nome, self.celular, self.email]
 
-        pickle.dump(lista_pessoa, open(dados_pessoa, 'ab+'))
+        print ("Cadastro Realizado com Sucesso!")
 
-        print ('Cadastro Realizado com Sucesso!')
+        self.salvar()
 
-        #exportando os dados
-        self.save_pessoa()
+    def salvar(self):
+        with open (dados_pessoa, 'a') as dados:
+            dados.write(str(self.lista_pessoa) + "\n")
 
-    def exibir_pessoa(self):
-        print('nome, celular, email')
-        with open ('pessoa.txt', 'r') as arquivo:
-            for linhas in arquivo:
-                linhas_em_branco = linhas.strip()
-                print(linhas_em_branco)
-
-    def save_pessoa (self):
-        with open ('pessoa.txt', 'a') as dados:
-            nova_lista = pickle.load(open(dados_pessoa, 'rb'))
-            dados.write(str(nova_lista) + '\n')
+    def exibir(self):
+        with open (dados_pessoa, 'r') as arquivo:
+            for linha in arquivo:
+                linhas_em_brancos = linha.strip()
+                print(linhas_em_brancos)

@@ -25,7 +25,7 @@ class aluno (p.pessoa):
         self.linkedin = input('Digite o linkedin: ')
         self.instagram = input('Digite o instagram: ')
         
-        self.lista_aluno = [super.p.nome, super.p.celular, super.p.email, self.rg, self.cpf, self.convenio, self.matricula, self.facebook, self.linkedin, self.instagram]
+        self.lista_aluno = [ self.rg, self.cpf, self.convenio, self.matricula, self.facebook, self.linkedin, self.instagram, super.p.nome, super.p.celular, super.p.email]
 
         print('Cadastro realizado com sucesso! ')
 

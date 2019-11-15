@@ -23,9 +23,11 @@ class professor (p.pessoa):
         self.linkedin = input('Digite o Linkedin: ')
         self.lattes = input('Digite o lattes: ')
         self.nivel = input('Digite o nivel: ')
-        super().cadastrar_pessoa()
+        
+        super().cadastrar_pessoa() 
+        
         self.lista_professor = [self.matricula_professor, self.titulacao, self.especialidade, self.plus_salario, self.salario_hora, self.linkedin, self.lattes, self.nivel, super.p.nome, super.p.celular, super.p.email]
-
+    
         print('Cadastro realizado com sucesso! ')
 
         self.salvar()

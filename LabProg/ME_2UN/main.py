@@ -79,8 +79,7 @@ class menu:
             if self.subopcao == '2':
                 self.c.exibir()   
             if self.subopcao == '3':
-                self.c.exibir_valor()        
-        
+                self.c.exibir_valor()
 
 main = menu()
 main.main_menu()

@@ -1,0 +1,1 @@
+ ['NATAN', '123', '123', '123', '123', '123', '123', '123', '123', '123', '1'] ['natan', 'asd', 'asdas', 'dasd', 'asda', 'sdas', 'dasd', 'a', 'asd', 'asd', 1.0] ['natan', 'asda', 'sdas', 'das', 'dasd', 'a', 'asd', 'asd', 'asd', 'asd', 1.0]

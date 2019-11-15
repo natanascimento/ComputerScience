@@ -1,3 +1,5 @@
+import professor as prof
+
 dados_curso = 'curso.txt'
 valor_curso = 'valor_total_curso.txt'
 
@@ -9,6 +11,7 @@ class curso():
         self.qtd_alunos = " "
         self.lista_curso = ' '
         self.lista_valor = ' '
+        self.prof = prof.professor()
 
     def cadastrar_curso(self):
         self.nome = input('Digite o nome do curso: ')
@@ -38,6 +41,9 @@ class curso():
 
     def calcular_valor_curso (self):
         self.valor_total_curso = (self.valor * self.qnt_alunos)
+
+        if self.valor_total_curso == self.prof.describenivel:
+            print ('Ta Pago')
 
         self.lista_valor = [self.valor_total_curso]
 

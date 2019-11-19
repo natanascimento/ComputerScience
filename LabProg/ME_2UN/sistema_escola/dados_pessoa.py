@@ -8,7 +8,7 @@ class pessoa:
         self.nome = " "
         self.celular = " "
         self.email = " "
-        self.lista_pessoa = ' '
+        self.lista_pessoa = " "
 
     def cadastrar_pessoa (self):
         self.nome = input('Informe seu nome: ')
@@ -24,6 +24,7 @@ class pessoa:
             dados.write(str(self.lista_pessoa))
 
     def exibir(self):
+        print('[nome, celular, email]')
         with open (dados_pessoa, 'r') as arquivo:
             for linha in arquivo:
                 linhas_em_brancos = linha.strip()

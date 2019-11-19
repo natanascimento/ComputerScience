@@ -45,7 +45,7 @@ class professor (p.pessoa):
 
     def salvar(self):
         with open(dados_professor, 'a') as dados:
-            dados.write(str(self.lista_professor))
+            dados.write(str(self.lista_professor + '\n'))
     
 
     def exibir(self):

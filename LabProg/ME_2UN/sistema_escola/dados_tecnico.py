@@ -29,7 +29,7 @@ class tecnico_administrativo(p.pessoa):
     
     def salvar(self):
         with open(dados_tecnico_administrativo, 'a') as dados: 
-            dados.write(str(self.lista_tecnico_administrativo))
+            dados.write(str(self.lista_tecnico_administrativo + '\n'))
     
     
     def exibir(self):

@@ -31,7 +31,8 @@ class curso():
         with open (dados_curso, 'a') as dados: 
             dados.write(str(self.lista_curso))
 
-    def exibir(self): 
+    def exibir(self):
+        print('[nome, valor, carga_horario, qnt_alunos]')
         with open (dados_curso, 'r') as arquivo:
             for linha in arquivo: 
                 linhas_em_brancos = linha.strip()

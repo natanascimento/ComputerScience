@@ -27,7 +27,7 @@ class endereco:
     
     def salvar(self):
         with open(dados_endereco, 'a') as dados: 
-            dados.write(str(self.lista_endereco))
+            dados.write(str(self.lista_endereco + '\n'))
     
     def exibir(self):
         print('[logradouro, numero, complemento, bairro, cidade, UF]')

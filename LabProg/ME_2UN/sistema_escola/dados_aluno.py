@@ -33,7 +33,7 @@ class aluno (p.pessoa):
     
     def salvar(self):
         with open(dados_aluno, 'a') as dados: 
-            dados.write(str(self.lista_aluno))
+            dados.write(str(self.lista_aluno + '\n'))
 
 
     def exibir_aluno(self):

@@ -1,6 +1,6 @@
 #Classe Pessoa#
 
-dados_pessoa = 'pessoa.txt'
+dados_pessoa = 'sistema_escola/dados_exportados/pessoa.txt'
 
 class pessoa:
 

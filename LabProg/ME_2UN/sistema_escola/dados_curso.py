@@ -1,7 +1,7 @@
 from sistema_escola import dados_professor as prof
 
-dados_curso = 'curso.txt'
-valor_curso = 'valor_total_curso.txt'
+dados_curso = 'sistema_escola/dados_exportados/curso.txt'
+valor_curso = 'sistema_escola/dados_exportados/valor_total_curso.txt'
 
 class curso(): 
     def __init__(self): 

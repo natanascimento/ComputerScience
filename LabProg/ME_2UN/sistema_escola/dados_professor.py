@@ -1,4 +1,4 @@
-dados_professor = 'professor.txt'
+dados_professor = 'sistema_escola/dados_exportados/professor.txt'
 
 from sistema_escola import dados_pessoa as p 
 

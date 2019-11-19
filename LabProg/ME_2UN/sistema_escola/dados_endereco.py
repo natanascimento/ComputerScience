@@ -1,4 +1,6 @@
 
+dados_endereco = 'sistema_escola/dados_exportados/endereco.txt'
+
 class endereco:
     def __init__(self): 
         self.logradouro = " "
@@ -19,6 +21,17 @@ class endereco:
     
         self.lista_endereco = [self.logradouro, self.numero, self.complemento, self.bairro, self.cidade, self.uf]
 
-    print('Cadastro relizado com sucesso!')
+        print('Cadastro relizado com sucesso!')
+
+        self.salvar()
     
+    def salvar(self):
+        with open(dados_endereco, 'a') as dados: 
+            dados.write(str(self.lista_endereco))
     
+    def exibir(self):
+        print('[logradouro, numero, complemento, bairro, cidade, UF]')
+        with open(dados_endereco, 'r') as arquivo: 
+            for linha in arquivo: 
+                linhas_em_brancos = linha.strip()
+                print(linhas_em_brancos)

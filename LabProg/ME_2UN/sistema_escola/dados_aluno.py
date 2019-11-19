@@ -1,5 +1,5 @@
 
-dados_aluno = 'aluno.txt'
+dados_aluno = 'sistema_escola/dados_exportados/aluno.txt'
 
 from sistema_escola import dados_pessoa as p 
 

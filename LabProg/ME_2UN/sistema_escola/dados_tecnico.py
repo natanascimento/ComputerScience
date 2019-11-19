@@ -1,4 +1,4 @@
-dados_tecnico_administrativo = 'tecnico_administrativo.txt'
+dados_tecnico_administrativo = 'sistema_escola/dados_exportados/tecnico_administrativo.txt'
 
 from sistema_escola import dados_pessoa as p 
 

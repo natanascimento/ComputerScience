@@ -1,7 +1,7 @@
 
 dados_aluno = 'aluno.txt'
 
-from sis.pessoa import dados_pessoa as p 
+from sistema_escola import dados_pessoa as p 
 
 class aluno (p.pessoa): 
     def __init__(self):

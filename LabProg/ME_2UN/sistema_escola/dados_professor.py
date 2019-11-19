@@ -1,6 +1,6 @@
 dados_professor = 'professor.txt'
 
-from sis.pessoa import dados_pessoa as p 
+from sistema_escola import dados_pessoa as p 
 
 class professor (p.pessoa): 
     def __init__(self): 

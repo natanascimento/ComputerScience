@@ -1,6 +1,6 @@
 dados_tecnico_administrativo = 'tecnico_administrativo.txt'
 
-from sis.pessoa import dados_pessoa as p 
+from sistema_escola import dados_pessoa as p 
 
 class tecnico_administrativo(p.pessoa):
     def __init__ (self): 

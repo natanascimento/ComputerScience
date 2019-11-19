@@ -1,4 +1,4 @@
-from sis.professor import dados_professor as prof
+from sistema_escola import dados_professor as prof
 
 dados_curso = 'curso.txt'
 valor_curso = 'valor_total_curso.txt'

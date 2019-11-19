@@ -1,10 +1,10 @@
 #Menu#
 
-from sis.pessoa import dados_pessoa as p
-from sis.aluno import dados_aluno as a
-from sis.tecnic import dados_tecnico as t
-from sis.professor import dados_professor as f
-from sis.curso import dados_curso as c
+from sistema_escola import dados_pessoa as p
+from sistema_escola import dados_aluno as a
+from sistema_escola import dados_tecnico as t
+from sistema_escola import dados_professor as f
+from sistema_escola import dados_curso as c
 
 class menu:
 

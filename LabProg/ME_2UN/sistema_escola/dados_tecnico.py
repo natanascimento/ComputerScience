@@ -10,6 +10,7 @@ class tecnico_administrativo(p.pessoa):
         self.salario_mes = " "
         self.nivel = " "
         self.lista_tecnico_administrativo = " "
+        self.describenivel = ' '
         super().__init__()
     
     
@@ -25,7 +26,18 @@ class tecnico_administrativo(p.pessoa):
         
         print('Cadastro realizado com sucesso! ')
 
+        self.describe_nivel_tec()
         self.salvar()
+    
+    def describe_nivel_tec(self):
+        if self.nivel == 1:
+            self.describenivel = 1500,00
+        if self.nivel == 2:
+            self.describenivel = 2380,00
+        if self.nivel == 3:
+            self.describenivel = 3500,00
+        if self.nivel == 4:
+            self.describenivel = 4277,32
     
     def salvar(self):
         with open(dados_tecnico_administrativo, 'a') as dados: 

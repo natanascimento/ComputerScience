@@ -5,6 +5,7 @@ from sistema_escola import dados_aluno as a
 from sistema_escola import dados_tecnico as t
 from sistema_escola import dados_professor as f
 from sistema_escola import dados_curso as c
+from sistema_escola import folha_pagamento as fp
 
 class menu:
 
@@ -16,11 +17,12 @@ class menu:
         self.t = t.tecnico_administrativo()
         self.f = f.professor()
         self.c = c.curso()
+        self.fp = fp.folha()
 
     def main_menu(self):
         print('     Sistema Escolar')
         print('---------------------------')
-        print('1 - Pessoa\n2 - Aluno\n3 - Tecnico Adiminstrativo\n4 - Professor\n5 - Curso')
+        print('1 - Pessoa\n2 - Aluno\n3 - Tecnico Adiminstrativo\n4 - Professor\n5 - Curso\n6 - Folha de Pagamento')
         print('---------------------------')
         self.opcao = input('Informe uma opção: ')
         
@@ -80,6 +82,15 @@ class menu:
                 self.c.exibir()   
             if self.subopcao == '3':
                 self.c.exibir_valor()
+
+        if self.opcao == '6':
+            print('---------------------------')
+            print('1 - Exibir Folha')
+            print('---------------------------')
+            self.subopcao = input('Informe uma opção: ')
+
+            if self.subopcao == '1':
+                self.fp.set_salario_prof()
 
 main = menu()
 main.main_menu()

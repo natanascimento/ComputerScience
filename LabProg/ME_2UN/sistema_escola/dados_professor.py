@@ -1,4 +1,5 @@
 dados_professor = 'sistema_escola/dados_exportados/professor.txt'
+dados_salarioprof = 'sistema_escola/dados_exportados/salario_prof.txt'
 
 from sistema_escola import dados_pessoa as p 
 
@@ -14,6 +15,7 @@ class professor (p.pessoa):
         self.nivel = " "
         self.lista_professor = ' '
         self.describenivel = ' '
+        self.lista_salario_prof = ' '
         super().__init__()
 
     def cadastrar_professor(self):
@@ -31,21 +33,38 @@ class professor (p.pessoa):
     
         print('Cadastro realizado com sucesso! ')
 
+        self.describe_nivel_prof()
         self.salvar()
-    
-    def describe_nivel(self):
+
+
+    def describe_nivel_prof(self):
         if self.nivel == 1:
-            self.describenivel = 2570,00
+            self.describenivel = 2570.00
+            self.lista_salario_prof = [self.describenivel]
         if self.nivel == 2:
-            self.describenivel = 3685,00
+            self.describenivel = 3685.00
+            self.lista_salario_prof = [self.describenivel]
         if self.nivel == 3:
-            self.describenivel = 4843,33
+            self.describenivel = 4843.33
+            self.lista_salario_prof = [self.describenivel]
         if self.nivel == 4:
-            self.describenivel = 5223,77
+            self.describenivel = 5223.77
+            self.lista_salario_prof = [self.describenivel]
+        self.salvar_salario()
+
+    def salvar_salario(self):
+        with open(dados_salarioprof, 'a') as dados_salario:
+            dados_salario.write(float(self.lista_salario_prof))
+
+    def exibir_salario (self):
+        with open(dados_salarioprof, 'r') as arquivo_salario:
+            for linha in arquivo_salario:
+                linhas_em_branco = linha.strip()
+                print(linhas_em_branco)
 
     def salvar(self):
         with open(dados_professor, 'a') as dados:
-            dados.write(str(self.lista_professor + '\n'))
+            dados.write(str(self.lista_professor))
     
 
     def exibir(self):
